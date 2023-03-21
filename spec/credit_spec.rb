@@ -21,6 +21,18 @@ RSpec.describe AccountHolder do
       expect(account_holder.balance).to eq(100)
     end
 
+    it 'credits  to an existing balance' do
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 10)
+      account_holder.addCredit('21-03-2023', 100)
+      expect(account_holder.balance).to eq(110)
+    end
+
+    it 'credits  to existing balance with decimal places' do
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 10.00)
+      account_holder.addCredit('21-03-2023', 101)
+      expect(account_holder.balance).to eq(111.00)
+    end
+
     it 'adds credit with two decimal places to the balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 0)
       account_holder.addCredit('21-03-2023', 100.01)
@@ -28,9 +40,9 @@ RSpec.describe AccountHolder do
     end
 
     it 'adds large credit with two decimal places to the balance' do
-      account_holder = AccountHolder.new('21-03-2023', nil, nil, 0)
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 1.00)
       account_holder.addCredit('21-03-2023', 57000.11)
-      expect(account_holder.balance).to eq(57000.11)
+      expect(account_holder.balance).to eq(57001.11)
     end
   end
 end

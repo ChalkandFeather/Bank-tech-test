@@ -64,6 +64,10 @@ multiple withdrawals and single credits
 
 # Edge cases
 
+effect of withdrawal beyond available balance
+date || credit || debit || balance
+14/01/2023 || || 500.00 || -100.00
+
 balance enquiry only, with 00.00 balance
 balance enquiry only, with 100.00 balance
 balance enquire only, with 100.01 balance
