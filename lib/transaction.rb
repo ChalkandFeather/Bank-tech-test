@@ -33,31 +33,3 @@ class AccountHolder
   end
 end
 
-
-
-# def veiwDebit(debit)
-#    @balance -= debit
-#   return 
-
-#   Yes, you can use Ruby's Hash.new to continually create new hashes to represent bank transactions with the desired information. Here's an example of how you can use Hash.new to represent a transaction and update the balance:
-
-#   ruby
-#   Copy code
-#   # initialize the balance to 0
-#   balance = 0
-  
-#   # create an empty transaction hash
-#   transaction = Hash.new
-  
-#   # set the values for the transaction
-#   transaction[:date] = '2023-03-21'
-#   transaction[:credit] = 100
-#   transaction[:debit] = 0
-#   transaction[:balance] = balance + transaction[:credit] - transaction[:debit]
-  
-#   # update the balance
-#   balance = transaction[:balance]
-  
-#   # print the transaction and the updated balance
-#   puts "Transaction: #{transaction}"
-#   puts "Updated balance: #{balance}"
