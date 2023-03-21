@@ -9,7 +9,7 @@ class AccountHolder
     @transactions = []
   end
 
-  def addCredit(date, amount)
+  def add_credit(date, amount)
     new_balance = @balance += amount.to_f
     transaction = {date: date, credit: amount, debit: nil, balance: new_balance}
     @transactions << transaction
@@ -25,10 +25,10 @@ class AccountHolder
     end
 
 
-  def printStatement
+  def print_statement
     puts "date       ||credit  ||debit   ||balance "
    @transactions.reverse.each do |transaction|
-    puts "#{transaction[:date]}, #{transaction[:credit]}, #{transaction[:debit]}, #{transaction[:balance]}, \n"
+    puts "#{transaction[:date]}, #{transaction[:credit]}, #{transaction[:debit]}, #{transaction[:balance]} \n"
     end 
   end
 end
