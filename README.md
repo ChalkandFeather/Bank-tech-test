@@ -3,7 +3,7 @@
 - Language: Ruby
 - Testing: RSpec
 
-CLI Setup
+CLI Quick Setup
 
 - rvm get stable
 - rvm use ruby --latest --install -- default
@@ -50,9 +50,15 @@ date || credit || debit || balance
 
 # Testing
 
-credit account, with 00.00 balance
-credit account only, with 100.00 balance
-credit account only, with 100.01 balance
+Credit account, with 00.00 balance
+Credit account with existing balance of 100.00
+credit account, with 100.01 balance
+credit account with existing balance of balance 101.01
+add multiple credits on same day
+
+withdrawal from accounts available balance
+withdrawal from account only, with 100.00 balance
+withdrawal from account only, with 100.01 balance
 
 single credit same day
 single withdrawal same day
@@ -74,6 +80,7 @@ balance enquire only, with 100.01 balance
 
 # User questions:
 
+should the statment display individual lines for multiple credits added to the account on the same day.
 what format should the statement be presented e.g date
 Is there a limit to whic a user can withdraw funds?
 Can a user withdraw more than the balance? - set max

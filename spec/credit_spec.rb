@@ -44,5 +44,12 @@ RSpec.describe AccountHolder do
       account_holder.addCredit('21-03-2023', 57000.11)
       expect(account_holder.balance).to eq(57001.11)
     end
+
+    it 'adds 2 credits with two decimal places to the balance on the same day' do
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 100.00)
+      account_holder.addCredit('21-03-2023', 40.00)
+      account_holder.addCredit('21-03-2023', 40.00)
+      expect(account_holder.balance).to eq(180.00)
+    end
   end
 end

@@ -1,8 +1,10 @@
-# require relative 'credit.rb'
-# require relative 'transaction.rb'
+# require_relative 'transaction'
 
 
-#   def print_statement
-#     puts "date    ||credit  ||debit   ||    balance"
-    
-#   returns transaction history 
+#   def printStatement
+#     puts "date       ||credit  ||debit   ||balance "
+#    @transactions.reverse.each do |transaction|
+#     puts "#{transaction[:date]}, #{transaction[:credit]}, #{transaction[:debit]}, #{transaction[:balance]}, \n"
+
+#     end
+ 
