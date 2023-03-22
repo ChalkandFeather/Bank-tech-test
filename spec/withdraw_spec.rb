@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 SimpleCov.start
-
 
 RSpec.describe AccountHolder do
   describe '#withdraw' do
@@ -16,7 +17,6 @@ RSpec.describe AccountHolder do
       expect(account_holder.balance).to eq(9)
     end
 
-
     it 'withdraws funds from the balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 200)
       account_holder.withdraw('21-03-2023', 100)
@@ -30,9 +30,9 @@ RSpec.describe AccountHolder do
     end
 
     it 'adds large credit with two decimal places to the balance' do
-      account_holder = AccountHolder.new('21-03-2023', nil, nil, 114000.22)
-      account_holder.withdraw('21-03-2023', 57000.11)
-      expect(account_holder.balance).to eq(57000.11)
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 114_000.22)
+      account_holder.withdraw('21-03-2023', 57_000.11)
+      expect(account_holder.balance).to eq(57_000.11)
     end
 
     it 'clears balance to zero if all funds are withdrawn' do
@@ -41,6 +41,4 @@ RSpec.describe AccountHolder do
       expect(account_holder.balance).to eq(0)
     end
   end
-
-  
 end

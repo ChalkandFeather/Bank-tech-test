@@ -2,6 +2,8 @@
 
 - Language: Ruby
 - Testing: RSpec
+- Linter: Ruby linter RuboCop
+- Code coverage analysis tool: SimpleCov
 
 CLI Quick Setup
 

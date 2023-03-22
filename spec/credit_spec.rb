@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'transaction'
 require 'simplecov'
 SimpleCov.start
-
 
 RSpec.describe AccountHolder do
   describe '#add_credit' do
@@ -16,7 +17,6 @@ RSpec.describe AccountHolder do
       account_holder.add_credit('2022-01-01', 1)
       expect(account_holder.balance).to eq(1)
     end
-
 
     it 'adds credit to the balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 0)
@@ -44,8 +44,8 @@ RSpec.describe AccountHolder do
 
     it 'adds large credit with two decimal places to the balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 1.00)
-      account_holder.add_credit('21-03-2023', 57000.11)
-      expect(account_holder.balance).to eq(57001.11)
+      account_holder.add_credit('21-03-2023', 57_000.11)
+      expect(account_holder.balance).to eq(57_001.11)
     end
 
     it 'adds 2 credits with two decimal places to the balance on the same day' do
