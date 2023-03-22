@@ -20,7 +20,7 @@ class AccountHolder
   end
 
   def withdraw(date, amount)
-    new_balance = @balance -= amount.to_f
+    new_balance = (@balance - amount).round(2)
     transaction = { date: date, credit: nil, debit: amount, balance: new_balance }
     @transactions << transaction
     @balance = new_balance

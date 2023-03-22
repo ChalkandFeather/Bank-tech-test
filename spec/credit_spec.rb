@@ -15,7 +15,7 @@ RSpec.describe AccountHolder do
     it 'adds single digit credit to the balance' do
       account_holder = AccountHolder.new('2022-01-01', nil, nil, 0)
       account_holder.add_credit('2022-01-01', 1)
-      expect(account_holder.balance).to eq(1)
+      expect(account_holder.balance).to eq(1.00)
     end
 
     it 'adds  credit to 2 decimal places balance' do
@@ -27,13 +27,13 @@ RSpec.describe AccountHolder do
     it 'adds credit to the balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 0)
       account_holder.add_credit('21-03-2023', 100)
-      expect(account_holder.balance).to eq(100)
+      expect(account_holder.balance).to eq(100.00)
     end
 
     it 'credits  to an existing balance' do
       account_holder = AccountHolder.new('21-03-2023', nil, nil, 10)
       account_holder.add_credit('21-03-2023', 100)
-      expect(account_holder.balance).to eq(110)
+      expect(account_holder.balance).to eq(110.00)
     end
 
     it 'credits  to existing balance with decimal places' do

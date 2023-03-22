@@ -32,7 +32,7 @@ RSpec.describe AccountHolder do
     end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 50.00 \n01-03-2023|| 100|| || 100.00 \n").to_stdout
   end
 
-  it 'prints the transaction history for a credit and debit     transaction' do
+  it 'prints the transaction history for a credit and debit  transaction' do
     account_holder = AccountHolder.new('01-03-2023', nil, nil, 0)
     account_holder.add_credit('01-03-2023', 100)
     account_holder.add_credit('01-03-2023', 10)
