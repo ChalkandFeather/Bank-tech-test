@@ -38,5 +38,5 @@ RSpec.describe AccountHolder do
       account_holder.withdraw('03-03-2023', 10)
        expect {account_holder.print_statement }.to output("date       ||credit  ||debit   ||balance \n03-03-2023|| || 10|| 50.0 \n02-03-2023|| || 50|| 60.0 \n01-03-2023|| 10|| || 110.0 \n31-02-2023|| 100|| || 100.0 \n").to_stdout
      end
-   end
+
 
