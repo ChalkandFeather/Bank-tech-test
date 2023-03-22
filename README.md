@@ -56,7 +56,6 @@ credit account, with 100.01 balance
 credit account with existing balance of balance 101.01
 add multiple credits on same day
 
-withdrawal from accounts available balance
 withdrawal from account only, with 100.00 balance
 withdrawal from account only, with 100.01 balance
 
@@ -77,11 +76,12 @@ date || credit || debit || balance
 balance enquiry only, with 00.00 balance
 balance enquiry only, with 100.00 balance
 balance enquire only, with 100.01 balance
+balance enquire only, with -100.00 balance
 
 # User questions:
 
-should the statment display individual lines for multiple credits added to the account on the same day.
-what format should the statement be presented e.g date
-Is there a limit to whic a user can withdraw funds?
+should the statment display new lines with updated balance status for multiple credits added to the account on the same day.
+
+Is there a limit to which a user can withdraw funds?
 Can a user withdraw more than the balance? - set max
 Is there a daily withdrawal limit?
