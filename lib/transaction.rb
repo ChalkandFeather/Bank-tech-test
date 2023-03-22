@@ -27,9 +27,9 @@ class AccountHolder
   end
 
   def print_statement
-    puts 'date       ||credit  ||debit   ||balance '
+      puts 'date       ||credit  ||debit   ||balance '
     if @transactions.empty?
-      puts "#{@date} ||       ||        ||#{sprintf('%.2f', @balance)}"
+      puts "#{@date}||       ||        ||#{sprintf('%.2f', @balance)}"
     else
     @transactions.reverse.each do |transaction|
       puts "#{transaction[:date]}|| #{transaction[:credit]}|| #{transaction[:debit]}|| #{sprintf('%.2f', transaction[:balance])} \n"
@@ -37,3 +37,10 @@ class AccountHolder
   end
 end
 end
+  
+  # def balance_enquiry(date)
+  #     puts 'date       ||credit  ||debit   ||balance '
+  #   if @transactions.empty?
+  #     puts "#{@date} ||       ||        ||#{sprintf('%.2f', @balance)}"
+  #   end
+  # end

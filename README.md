@@ -22,6 +22,8 @@ I listed the requirements and stuck to this.
 I began with a strict TDD process ensuring that unit testing was passing green.
 I expolored possibilties for how to write the program and used web searches and previous programs to scaffold the codebase.
 Step by step - followed the Makers response form- addressing area's highlighted by this process and correcting as advised.
+Being forced to work in this manner has guided the process and forced changes that may have been overlooked or missed. It will inform me for better working practises in future projects.
+I encountered a rounding error when applying the withdrawal of 100.00 from a 100.01 balance, which I updated using .round(2)
 
 # Prog Requirements
 
