@@ -17,13 +17,17 @@ git repo : https://github.com/ChalkandFeather/Bank-tech-test.git
 # Approach
 
 I was keen to ensure that I understood the requirements of the program which I broke down into simple language and diagramed to create a flow.
-Prioratised prog requirements.
-I listed the requirements and stuck to this.
-I began with a strict TDD process ensuring that unit testing was passing green.
+Prioratised basic prog requirements.
+I listed the requirements and stuck to prioties.
+I began with a strict TDD process ensuring that unit testing was passing green before commiting to github.
 I expolored possibilties for how to write the program and used web searches and previous programs to scaffold the codebase.
+Utilised linters.
 Step by step - followed the Makers response form- addressing area's highlighted by this process and correcting as advised.
-Being forced to work in this manner has guided the process and forced changes that may have been overlooked or missed. It will inform me for better working practises in future projects.
+Being forced to work in this manner has guided the process and forced changes that may otherwise have been overlooked or missed. It will inform me for better working practises in future projects.
+
 I encountered a rounding error when applying the withdrawal of 100.00 from a 100.01 balance, which I updated using .round(2)
+I was introduced to a number of new concepts during this review.
+To expand this project, it would be advisable to follow the seperation of concerns principle for the methods within 'transactions.rb'
 
 # Prog Requirements
 
