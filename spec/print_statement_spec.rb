@@ -61,4 +61,14 @@ RSpec.describe AccountHolder do
       account_holder.print_statement
     end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 150.0 \n01-03-2023|| 100|| || 200.0 \n").to_stdout
   end
+
+  it 'returns a negative balance when insufficient funds' do
+    account_holder = AccountHolder.new('01-03-2023', nil, nil, 0)
+    account_holder.withdraw('02-03-2023', 50)
+    expect do
+      account_holder.print_statement
+    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| -50.0 \n").to_stdout
+  end
 end
+
+

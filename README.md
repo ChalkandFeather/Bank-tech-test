@@ -14,6 +14,15 @@ CLI Quick Setup
 
 git repo : https://github.com/ChalkandFeather/Bank-tech-test.git
 
+# Approach
+
+I was keen to ensure that I understood the requirements of the program which I broke down into simple language and diagramed to create a flow.
+Prioratised prog requirements.
+I listed the requirements and stuck to this.
+I began with a strict TDD process ensuring that unit testing was passing green.
+I expolored possibilties for how to write the program and used web searches and previous programs to scaffold the codebase.
+Step by step - followed the Makers response form- addressing area's highlighted by this process and correcting as advised.
+
 # Prog Requirements
 
 - Properties:  
@@ -69,7 +78,7 @@ single credit and single withdrawal same day
 mutliple credits and single withdrawal
 multiple withdrawals and single credits
 
-# Edge cases
+# Edge cases & client questions:
 
 effect of withdrawal beyond available balance
 date || credit || debit || balance
@@ -85,5 +94,6 @@ balance enquire only, with -100.00 balance
 should the statment display new lines with updated balance status for multiple credits added to the account on the same day.
 
 Is there a limit to which a user can withdraw funds?
-Can a user withdraw more than the balance? - set max
+Can a user withdraw more than the balance? - set max?
 Is there a daily withdrawal limit?
+restrictions on dates for which a statment can be supplied?
