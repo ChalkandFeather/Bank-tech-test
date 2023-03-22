@@ -1,4 +1,6 @@
 require 'transaction'
+require 'simplecov'
+SimpleCov.start
 
 RSpec.describe AccountHolder do
   describe '#print_statement' do

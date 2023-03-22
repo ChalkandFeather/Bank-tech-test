@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 
 
 RSpec.describe AccountHolder do

@@ -1,4 +1,7 @@
 require 'transaction'
+require 'simplecov'
+SimpleCov.start
+
 
 RSpec.describe AccountHolder do
   describe '#add_credit' do
