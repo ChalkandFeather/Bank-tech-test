@@ -29,10 +29,10 @@ class AccountHolder
   def print_statement
     puts 'date       ||credit  ||debit   ||balance '
     if @transactions.empty?
-      puts "#{@date} ||       ||        ||#{@balance}"
+      puts "#{@date} ||       ||        ||#{sprintf('%.2f', @balance)}"
     else
     @transactions.reverse.each do |transaction|
-      puts "#{transaction[:date]}|| #{transaction[:credit]}|| #{transaction[:debit]}|| #{transaction[:balance]} \n"
+      puts "#{transaction[:date]}|| #{transaction[:credit]}|| #{transaction[:debit]}|| #{sprintf('%.2f', transaction[:balance])} \n"
     end
   end
 end

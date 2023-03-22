@@ -11,7 +11,7 @@ RSpec.describe AccountHolder do
       account_holder.add_credit('01-03-2023', 100)
       expect do
         account_holder.print_statement
-      end.to output("date       ||credit  ||debit   ||balance \n01-03-2023|| 100|| || 100.0 \n").to_stdout
+      end.to output("date       ||credit  ||debit   ||balance \n01-03-2023|| 100|| || 100.00 \n").to_stdout
     end
   end
 
@@ -29,7 +29,7 @@ RSpec.describe AccountHolder do
     account_holder.withdraw('02-03-2023', 50)
     expect do
       account_holder.print_statement
-    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 50.0 \n01-03-2023|| 100|| || 100.0 \n").to_stdout
+    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 50.00 \n01-03-2023|| 100|| || 100.00 \n").to_stdout
   end
 
   it 'prints the transaction history for a credit and debit     transaction' do
@@ -39,7 +39,7 @@ RSpec.describe AccountHolder do
     account_holder.withdraw('02-03-2023', 50)
     expect do
       account_holder.print_statement
-    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 60.0 \n01-03-2023|| 10|| || 110.0 \n01-03-2023|| 100|| || 100.0 \n").to_stdout
+    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 60.00 \n01-03-2023|| 10|| || 110.00 \n01-03-2023|| 100|| || 100.00 \n").to_stdout
   end
 
   it 'prints the transaction history for a credit and debit     transaction' do
@@ -50,7 +50,7 @@ RSpec.describe AccountHolder do
     account_holder.withdraw('03-03-2023', 10)
     expect do
       account_holder.print_statement
-    end.to output("date       ||credit  ||debit   ||balance \n03-03-2023|| || 10|| 50.0 \n02-03-2023|| || 50|| 60.0 \n01-03-2023|| 10|| || 110.0 \n31-02-2023|| 100|| || 100.0 \n").to_stdout
+    end.to output("date       ||credit  ||debit   ||balance \n03-03-2023|| || 10|| 50.00 \n02-03-2023|| || 50|| 60.00 \n01-03-2023|| 10|| || 110.00 \n31-02-2023|| 100|| || 100.00 \n").to_stdout
   end
 
   it 'prints the transaction history for a credit and debit     transaction' do
@@ -59,7 +59,7 @@ RSpec.describe AccountHolder do
     account_holder.withdraw('02-03-2023', 50)
     expect do
       account_holder.print_statement
-    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 150.0 \n01-03-2023|| 100|| || 200.0 \n").to_stdout
+    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| 150.00 \n01-03-2023|| 100|| || 200.00 \n").to_stdout
   end
 
   it 'returns a negative balance when insufficient funds' do
@@ -67,7 +67,7 @@ RSpec.describe AccountHolder do
     account_holder.withdraw('02-03-2023', 50)
     expect do
       account_holder.print_statement
-    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| -50.0 \n").to_stdout
+    end.to output("date       ||credit  ||debit   ||balance \n02-03-2023|| || 50|| -50.00 \n").to_stdout
   end
 end
 

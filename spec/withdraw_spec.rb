@@ -24,9 +24,9 @@ RSpec.describe AccountHolder do
     end
 
     it 'withdraws funds with two decimal places from the balance' do
-      account_holder = AccountHolder.new('21-03-2023', nil, nil, 200.02)
-      account_holder.withdraw('21-03-2023', 100.01)
-      expect(account_holder.balance).to eq(100.01)
+      account_holder = AccountHolder.new('21-03-2023', nil, nil, 100.01)
+      account_holder.withdraw('21-03-2023', 100)
+      expect(account_holder.balance).to eq(0.01)
     end
 
     it 'adds large credit with two decimal places to the balance' do
