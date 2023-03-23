@@ -37,10 +37,4 @@ class AccountHolder
   end
 end
 end
-  
-  # def balance_enquiry(date)
-  #     puts 'date       ||credit  ||debit   ||balance '
-  #   if @transactions.empty?
-  #     puts "#{@date} ||       ||        ||#{sprintf('%.2f', @balance)}"
-  #   end
-  # end
+

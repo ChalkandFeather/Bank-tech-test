@@ -18,7 +18,7 @@ git repo : https://github.com/ChalkandFeather/Bank-tech-test.git
 
 I was keen to ensure that I understood the requirements of the program which I broke down into simple language and diagramed to create a flow.
 Prioratised basic prog requirements.
-I listed the requirements and stuck to prioties.
+I listed the requirements and stuck to priorities.
 I began with a strict TDD process ensuring that unit testing was passing green before commiting to github.
 I expolored possibilties for how to write the program and used web searches and previous programs to scaffold the codebase.
 Utilised linters.
@@ -28,6 +28,8 @@ Being forced to work in this manner has guided the process and forced changes th
 I encountered a rounding error when applying the withdrawal of 100.00 from a 100.01 balance, which I updated using .round(2)
 I was introduced to a number of new concepts during this review.
 To expand this project, it would be advisable to follow the seperation of concerns principle for the methods within 'transactions.rb'
+
+methods are within a single file, however testing has been into individual feature test \_spec files.
 
 # Prog Requirements
 
@@ -44,8 +46,7 @@ To expand this project, it would be advisable to follow the seperation of concer
   - Displays
     category (date, credit, debit, balance)
     reverse chronological order on statement
-
-- Functions:
+    pipes to seperate categries
 
 # Specification:
 
@@ -96,8 +97,6 @@ balance enquire only, with 100.01 balance
 balance enquire only, with -100.00 balance
 
 # User questions:
-
-should the statment display new lines with updated balance status for multiple credits added to the account on the same day.
 
 Is there a limit to which a user can withdraw funds?
 Can a user withdraw more than the balance? - set max?
